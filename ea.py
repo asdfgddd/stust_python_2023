@@ -1,67 +1,21 @@
+class MyShape:
+    def __init__(self, square_side, rectangle_length, rectangle_width, radius):
+        self.square_side = square_side
+        self.rectangle_length = rectangle_length
+        self.rectangle_width = rectangle_width
+        self.radius = radius
 
-def demo(name, age):
-    
-    print(name, age)
+    def getSquareArea(self):
+        return self.square_side ** 2
 
-demo("Ben", 25)
-def func1(*args):
-    for i in args:
-        print(i)
+    def getRectangleArea(self):
+        return self.rectangle_length * self.rectangle_width
 
-func1(20, 40, 60)
-func1(80, 100)
+    def getCircleArea(self):
+        return 3.14 * self.radius ** 2
 
-
-
-def show_employee(name, salary=9000):
-    print("Name:", name, "salary:", salary)
-
-show_employee("Ben", 12000)
-show_employee("Jessa")
-                    
-def outer_fun(a, b):
-    square = a ** 2
-
-   
-    def addition(a, b):
-        return a + b
-
-    
-    add = addition(a, b)
-    
-    return add + 5
-
-result = outer_fun(5, 10)
-print(result)
-
-
-def addition(num):
-    if num:
-        
-        return num + addition(num - 1)
-    else:
-        return 0
-
-res = addition(10)
-print(res)
-
-
-
-def display_student(name, age):
-    print(name, age)
-
-
-display_student("Emma", 26)
-
-
-showStudent = display_student
-
-showStudent("Emma", 26)
-
-
-
-print(list(range(4, 30, 2)))
-
-
-x = [4, 6, 8, 24, 12, 2]
-print(max(x))
+# Example usage
+shape = MyShape(5, 10, 20, 7)
+print(shape.getSquareArea()) # Output: 25
+print(shape.getRectangleArea()) # Output: 200
+print(shape.getCircleArea()) # Output: 1538.86
