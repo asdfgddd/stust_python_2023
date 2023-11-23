@@ -36,7 +36,7 @@ print(f"New Salary after overtime: {adams.calculate_emp_salary(60)}")
 
 
 
-
+#另一個類別 二手車 保時捷車輛信息
 #class Car:
     #def __init__(self, brand, model, year, mileage, price,place):
         #self.brand = brand
